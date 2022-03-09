@@ -1,6 +1,7 @@
 filepath: ""
 helmfiles:
 - path: helmfiles/cert-manager/helmfile.yaml
+- path: helmfiles/jx-dev/helmfile.yaml
 - path: helmfiles/jx-production/helmfile.yaml
 - path: helmfiles/jx-staging/helmfile.yaml
 - path: helmfiles/jx/helmfile.yaml

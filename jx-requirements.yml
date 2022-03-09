@@ -15,6 +15,7 @@ spec:
     provider: gke
     registry: gcr.io
   environments:
+  - key: dev
   - key: staging
   - key: production
   ingress:
