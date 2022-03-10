@@ -40,7 +40,7 @@ jxRequirements:
     owner: prayugi
     repository: jx-gke-gsm-y
   ingress:
-    domain: change.me
+    domain: 35.187.231.149.nip.io
     kind: ingress
     namespaceSubDomain: -cert-manager.
     tls:
