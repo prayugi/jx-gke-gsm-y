@@ -16,8 +16,8 @@ spec:
     registry: gcr.io
   environments:
   - key: dev
-  - key: staging
-  - key: production
+    owner: prayugi
+    repository: jx-gke-gsm-y
   ingress:
     domain: ""
     externalDNS: false
