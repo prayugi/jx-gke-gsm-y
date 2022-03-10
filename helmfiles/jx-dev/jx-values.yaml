@@ -20,29 +20,45 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: yugi-jx-tf
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
+    - irvan-sekera
+    environmentGitOwner: defindal
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "398506542991"
     kanikoFlags: --skip-unused-stages --snapshotMode=redo
+    project: xl-devops
     provider: gke
     registry: gcr.io
+    zone: asia-southeast1-b
   environments:
   - key: dev
-  - key: staging
-  - key: production
+    owner: prayugi
+    repository: jx-gke-gsm-y
   ingress:
     domain: change.me
     kind: ingress
-    namespaceSubDomain: -jx-staging.
+    namespaceSubDomain: -jx-dev.
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  kuberhealthy: true
+  pipelineUser:
+    username: dahruman
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-yugi-jx-tf-d8436bfd2da1
+  - name: reports
+    url: gs://reports-yugi-jx-tf-d8436bfd2da1
+  - name: repository
+    url: gs://repository-yugi-jx-tf-d8436bfd2da1
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
@@ -50,7 +66,7 @@ jxRequirementsIngressExternalDNS:
 jxRequirementsIngressTLS:
   enabled: false
 jxRequirementsKuberhealthy:
-  enabled: false
+  enabled: true
 jxRequirementsTLSCheck:
   enabled: false
 jxRequirementsVault:
