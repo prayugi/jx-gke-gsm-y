@@ -10,6 +10,7 @@ spec:
     repositories:
     - name: jx-go-y
     - name: jx-golang-http
+    - name: ttttes
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
