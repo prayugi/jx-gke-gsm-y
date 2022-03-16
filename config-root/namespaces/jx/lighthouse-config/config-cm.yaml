@@ -8,6 +8,8 @@ data:
     in_repo_config:
       enabled:
         prayugi/jx-gke-gsm-y: true
+        prayugi/jx-go-y: true
+        prayugi/jx-golang-http: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +22,8 @@ data:
         skip-unknown-contexts: false
       merge_method:
         prayugi/jx-gke-gsm-y: merge
+        prayugi/jx-go-y: merge
+        prayugi/jx-golang-http: merge
       queries:
       - labels:
         - approved
@@ -31,6 +35,8 @@ data:
         - needs-rebase
         repos:
         - prayugi/jx-gke-gsm-y
+        - prayugi/jx-go-y
+        - prayugi/jx-golang-http
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +47,8 @@ data:
         - needs-rebase
         repos:
         - prayugi/jx-gke-gsm-y
+        - prayugi/jx-go-y
+        - prayugi/jx-golang-http
       target_url: http://lighthouse-jx.35.187.231.149.nip.io/merge/status
 kind: ConfigMap
 metadata:

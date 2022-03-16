@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: prayugi
+    provider: github
+    repository: jx-go-y
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: prayugi-jx-go-y
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/prayugi/jx-go-y.git
+  org: prayugi
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-go-y
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/prayugi/jx-go-y

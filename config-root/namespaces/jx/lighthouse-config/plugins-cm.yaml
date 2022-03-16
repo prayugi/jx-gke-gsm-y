@@ -6,6 +6,14 @@ data:
       repos:
       - prayugi/jx-gke-gsm-y
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - prayugi/jx-go-y
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - prayugi/jx-golang-http
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +29,16 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      prayugi/jx-go-y:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      prayugi/jx-golang-http:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +46,38 @@ data:
     plugins:
       prayugi/jx-gke-gsm-y:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      prayugi/jx-go-y:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      prayugi/jx-golang-http:
       - approve
       - assign
       - blunderbuss
@@ -55,6 +105,14 @@ data:
     - repos:
       - prayugi/jx-gke-gsm-y
       trusted_org: todo
+    - repos:
+      - prayugi/jx-go-y
+      trusted_org: todo
+    - repos:
+      - prayugi/jx-golang-http
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
