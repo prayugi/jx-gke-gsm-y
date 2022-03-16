@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
 spec:
   groups:
-  - owner: dahruman
+  - owner: prayugi
     provider: https://github.com
     providerKind: github
     repositories:
