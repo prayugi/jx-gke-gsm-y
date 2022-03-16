@@ -11,6 +11,12 @@ spec:
     - name: jx-go-y
     - name: jx-golang-http
     scheduler: in-repo
+  - owner: dahruman
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: jx-go4
+    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
