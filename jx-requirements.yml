@@ -9,7 +9,7 @@ spec:
     clusterName: yugi-jx-tf
     devEnvApprovers:
     - irvan-sekera
-    environmentGitOwner: defindal
+    environmentGitOwner: prayugi
     gitKind: github
     gitName: github
     gitServer: https://github.com
