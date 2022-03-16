@@ -8,7 +8,7 @@ spec:
     chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
     clusterName: yugi-jx-tf
     devEnvApprovers:
-    - irvan-sekera
+    - dahruman
     environmentGitOwner: prayugi
     gitKind: github
     gitName: github
@@ -24,6 +24,8 @@ spec:
   - key: dev
     owner: prayugi
     repository: jx-gke-gsm-y
+  - key: staging
+  - key: production
   ingress:
     domain: 35.187.231.149.nip.io
     kind: ingress
